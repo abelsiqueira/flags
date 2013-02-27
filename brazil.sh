@@ -4,9 +4,10 @@ export green="\033[1;42m\033[1;32m$char\033[0m"
 export yellow="\033[1;43m\033[1;33m$char\033[0m"
 export blue="\033[1;44m\033[1;34m$char\033[0m"
 
-export ROWS=$[$[$(tput lines)-2]/2]
-export COLS=$[$(tput cols)/2]
-export scale=$[$COLS/$ROWS + 1]
+export COLS=$[$(tput cols)/1]
+#export ROWS=$[$[$(tput lines)-2]/2]
+export ROWS=$[$COLS/4]
+export scale=$[$COLS/$ROWS + 3]
 export alpha=$[$COLS/2]
 export beta=$[$ROWS/2]
 
