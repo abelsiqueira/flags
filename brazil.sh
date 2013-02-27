@@ -1,12 +1,12 @@
 #!/bin/bash
-export char="0"
+export char=" "
 export green="\033[1;42m\033[1;32m$char\033[0m"
 export yellow="\033[1;43m\033[1;33m$char\033[0m"
 export blue="\033[1;44m\033[1;34m$char\033[0m"
 
-export COLS=$[$(tput cols)/1]
+COLS=$[$[$(tput cols)/4]*4 - 1]
 #export ROWS=$[$[$(tput lines)-2]/2]
-export ROWS=$[$COLS/4]
+export ROWS=$[$[$COLS + 1]/4]
 export scale=$[$COLS/$ROWS + 3]
 export alpha=$[$COLS/2]
 export beta=$[$ROWS/2]
